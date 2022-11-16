@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "jobapplication";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container jumbotron" style="font-size:small;color:maroon;">
+    <h2>Thank You.</h2><hr />
+    @*@ViewBag.Title;*@
+    @ViewBag.Message;<br />
+    <div>@Html.ActionLink("Click here to go to Home Page", "Index")</div>
+</div>

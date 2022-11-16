@@ -1,0 +1,227 @@
+﻿
+@{
+    ViewBag.Title = "ApplicationForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("jobapplication", "Home", FormMethod.Post, new { @id = "form1", @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="panel panel-success">
+            <div class="panel panel-heading" style="color:maroon;">Job Application Form.</div>
+            <div class="panel panel-body">
+                <div class="row">
+                    @* image  *@
+                    <div class="col-md-4">
+                        <div class="panel panel-success">
+                            <div class="panel panel-heading"></div>
+                            <div class="panel panel-body">
+                                <img src="~/Multimedia/Image/job-application-small.jpg" class="img-responsive" />
+                            </div>
+                        </div>
+                    </div>
+                    @* image *@
+
+                    @* other *@
+                    <div class="col-md-8">
+                        <div class="panel panel-success" style="font-size:small;">
+                            <div class="panel-heading">Pleae fill all the fields then click on submit button.</div>
+                            <div class="panel panel-body">
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <label>Designation Applying For*</label>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                @Html.DropDownList("DesignationFor", new List<SelectListItem>
+{
+   new SelectListItem{ Text="-Please Select-", Value = "-Please Select-" },
+    new SelectListItem{ Text=".Net Developer", Value = ".Net Developer" },
+   new SelectListItem{ Text="Website Developer", Value = "Website Developer" },
+   new SelectListItem{ Text="Database Admin", Value = "Database Admin" },
+   new SelectListItem{ Text="System Engineer", Value = "System Engineer" },
+   new SelectListItem{ Text="Application Support Engineer", Value = "Application Support Engineer" },
+   new SelectListItem{ Text="Biometrics Engineer", Value = "Biometrics Engineer" },
+   new SelectListItem{ Text="Others", Value = "Others" }
+}, new { @class = "form-control" })
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <label>Select Source*</label>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                @Html.DropDownList("ReferenceType", new List<SelectListItem>
+{
+   new SelectListItem{ Text="-Please Select-", Value = "-Please Select-" },
+    new SelectListItem{ Text="Reference", Value = "Reference" },
+   new SelectListItem{ Text="Job Conusultancy", Value = "Job Conusultancy" },
+   new SelectListItem{ Text="Our website career section", Value = "Our website career section" },
+   new SelectListItem{ Text="Others", Value = "Others" }
+
+}, new { @class = "form-control" })
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Reference Name:</label>
+                                        <input type="text" name="txtrefname" class="form-control" placeholder="Enter reference name in case if any person has referred you." required/>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label>Full Name:</label>
+                                        <input type="text" name="txtfullname" class="form-control" placeholder="Enter your full name" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Current Address:</label>
+                                        <input type="text" name="txtcurradd" class="form-control" placeholder="Enter your company name" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Permanent Address:</label>
+                                        <input type="text" name="txtpermadd" class="form-control" placeholder="Enter company manpower" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Email Id:</label>
+                                        <input type="text" name="txtemail" class="form-control" placeholder="Enter your email id" required />
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label>Identity No:</label>
+                                        <input type="text" name="txtidno" class="form-control" placeholder="Enter identity no" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Phone:</label>
+                                        <input type="text" name="txtphone" class="form-control" placeholder="Enter phone no" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Collage Name:</label>
+                                        <input type="text" name="txtcollage" class="form-control" placeholder="Enter your collage name" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Qualification:</label>
+                                        @Html.DropDownList("Qualification", new List<SelectListItem>
+{
+   new SelectListItem{ Text="-Please Select-", Value = "-Please Select-" },
+    new SelectListItem{ Text="Master of Computer Application (MCA)", Value = "Master of Computer Application (MCA)" },
+   new SelectListItem{ Text="Bachelor of Computer Application (BCA)", Value = "Bachelor of Computer Application (BCA)" },
+   new SelectListItem{ Text="Master of Arts (MA)", Value = "Master of Arts (MA)" },
+   new SelectListItem{ Text="Bachelor of Arts (BA)", Value = "Bachelor of Arts (BA)" },
+   new SelectListItem{ Text="Bachelor of Bussiness Administration (BBA)", Value = "Bachelor of Bussiness Administration (BBA)" },
+   new SelectListItem{ Text="Master of Bussiness Administration (MBA)", Value = "Master of Bussiness Administration (MBA)" },
+   new SelectListItem{ Text="Bachelor of Technology (BTech)", Value = "Bachelor of Technology (BTech)" },
+   new SelectListItem{ Text="Master of Technology (MTech)", Value = "Master of Technology (MTech)" },
+   new SelectListItem{ Text="Master of Science(MSC)", Value = "Master of Science(MSC)" },
+   new SelectListItem{ Text="Bachelor of Science(BSC)", Value = "Bachelor of Science(BSC)" },
+   new SelectListItem{ Text="Diploma", Value = "Diploma" },
+   new SelectListItem{ Text="Intermediate", Value = "Intermediate" },
+   new SelectListItem{ Text="Metric", Value = "Metric" },
+   new SelectListItem{ Text="Others", Value = "Others" }
+}, new { @class = "form-control" })
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label>Currenct Company:</label>
+                                        <input type="text" name="txtcurrcomp" class="form-control" placeholder="Enter company name" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Designation:</label>
+                                        <input type="text" name="txtcurrdesig" class="form-control" placeholder="Enter your designation" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Experience:</label>
+                                        <input type="text" name="txtexpr" class="form-control" placeholder="Enter your experience" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label>Working From:</label>
+                                        <input type="text" name="txtworkfrom" class="form-control" placeholder="dd/mm/yyyy" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Working TO:</label>
+                                        <input type="text" name="txtworkto" class="form-control" placeholder="dd/mm/yyyy" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Current Salary:</label>
+                                        <input type="text" name="txtcursal" class="form-control" placeholder="Current Salary" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label>Expected Salary:</label>
+                                        <input type="text" name="txtexpsal" class="form-control" placeholder="Expected Salary" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Notice days:</label>
+                                        <input type="text" name="txtnotice" class="form-control" placeholder="Enter your notice days" required />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Tech Skills:</label>
+                                        <input type="text" name="txttechskill" class="form-control" placeholder="please saperate your skills by entering ," required />
+                                    </div>
+                                </div>
+
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Upload Resume:</label>
+                                        <input type="file" name="fileUploader1" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Message:</label>
+                                        <textarea name="txtmessage" rows="2" cols="20" style="height:100px;width:100%;" maxlength="500" class="form-control" placeholder="Tell us in brief about yourself." required></textarea><br />
+                                    </div>
+                                </div>
+
+                                <div class="text-center"><button type="submit" class="btn btn-success btn-sm">Submit</button></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    @* other *@
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+}

@@ -1,0 +1,633 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  height:150px;
+  background-color: lightskyblue;
+  color: maroon;
+}
+
+.fa {font-size:50px;}
+</style>
+<script>
+$(document).ready(function(){
+  
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+    
+   
+});
+now = new Date();
+randomNum = '';
+randomNum += Math.round(Math.random() * 9);
+randomNum += Math.round(Math.random() * 9);
+randomNum += now.getTime();
+window.onload = function () {
+    document.getElementById("first").value = randomNum;
+}
+</script>
+
+@* content starts *@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" style="margin-top:0px;">
+        <div class="item active">
+            <img src="~/Multimedia/Image/softwaredevelopment.jpg" alt="Chania" />
+        </div>
+
+        <div class="item">
+            <img src="~/Multimedia/Image/webdesign.jpg" alt="Chania" />
+        </div>
+
+        <div class="item">
+            <img src="~/Multimedia/Image/domain.jpg" alt="Chania" />
+        </div>
+
+        <div class="item">
+            <img src="~/Multimedia/Image/seo.jpg" alt="Flower" />
+        </div>
+
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+@* content ends *@
+
+<hr />
+<div class="container jumbotron" style="text-align:justify;font-size:medium;"> 
+   
+       <strong style="color:maroon;">Welcome to MMC Soft Systems</strong>
+       <p style="font-size:small;">MMC Soft Systems is a business and IT services firm that delivers Application and Business Process Services to help clients reduce costs, enhance organizational flexibility, and improve their business and IT performance.</p>
+       <strong style="color:maroon;">Services</strong> <p style="font-size:small;">By listening to our client's needs, MMC has observed a growing convergence between application and business process services. By offering both services and addressing them holistically, we deliver rapid and compelling business value to our clients. 
+                                     Services include outsourcing of payroll and HR related processes.Application Services - Services include Application Portfolio Management, Application Outsourcing, Application Development, Integration and HR Strategic Staffing.Services include Application Portfolio Management, Application Development.
+    </p>
+       <br />
+       <span class="btn btn-default btn-sm">@Html.ActionLink("Register For Free Demo", "Enquiry")</span>
+       <span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "About")</span>
+  
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Desktop Application </div>
+                <div class="panel panel-body">
+                    <img alt="" src="~/Multimedia/Image/desktop.png" style="height:150px;width:100%;" class="img-thumbnail" />
+                    <h3 style="color:maroon;">
+                        Desktop Application
+                    </h3>
+                    <p style="text-align:justify;font-size:small;height:120px;">
+                        Developing scalable and rich payroll desktop application for growing our client's business as per their day to day business requirement.
+                    </p>
+                    <span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "DesktopApplication")</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Web Application</div>
+                <div class="panel panel-body">
+                    <img alt="" src="~/Multimedia/Image/webapp.jpg" style="height:150px;width:100%;" class="img-thumbnail"/>
+                    <h3 style="color:maroon;">
+                        Web Application
+                    </h3>
+                    <p style="text-align:justify;font-size:small;height:120px;">
+                        Build responsive, mobile-first projects on the web with the world's most popular front-end component library. Using open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
+                    </p>
+                    <span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "WebApplication")</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading"> Mobile Application</div>
+                <div class="panel panel-body">
+                    <img alt="" src="~/Multimedia/Image/mobileapp.jpg" style="height:150px;width:100%;" class="img-thumbnail"/>
+                    <h3 style="color:maroon;">
+                        Mobile Application
+                    </h3>
+                    <p style="text-align:justify;font-size:small;height:120px;">
+                        Now you can control and manage your business at your fingertips using your mobile. Using mobile friendly application which is developed specially for mobile friendly views of the payroll application so now payroll process is much easier than before.
+                    </p>
+                    <span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "MobileApplication")</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+
+            <div class="panel panel-info">
+                <div class="panel panel-heading">HRMS</div>
+                <div class="panel panel-body">
+                    <img alt="" src="~/Multimedia/Image/hrms.jpg" style="height:150px;width:100%;" class="img-thumbnail"/>
+                    <h3 style="color:maroon;">
+                        HRMS
+                    </h3>
+                    <p style="text-align:justify;font-size:small;height:150px;">
+                        We are commited to provide the best and world class hrms solution to our clients for all their business requirment and for better compliances. HRMS solution manage things wisely and smartly to handle the different compliance aspects.
+                    </p>
+                    <span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "HRMS")</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Compliances</div>
+                <div class="panel panel-body">
+                    <img alt="" src="~/Multimedia/Image/Compliance.jpg" style="height:150px;width:100%;" class="img-thumbnail"/>
+                    <h3 style="color:maroon;">
+                        Compliances
+                    </h3>
+                    <p style="text-align:justify;font-size:small;height:150px;">
+                        Payroll compliance helps organisations demonstrate transparent behaviour.In order for businesses to stay in payroll compliance with wage and hour laws, employers need to accurately track employee time and information. Complex regulations like the Sarbanes-Oxley Act, FLSA, FMLA, Department of Labor laws, and internal policies like union rules can put organizations at risk for litigation and fines.
+                    </p>
+                    <span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "Compliances")</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Technology</div>
+                <div class="panel panel-body">
+                    <img alt="" src="~/Multimedia/Image/technology-web-development.png" style="height:150px;width:100%;" class="img-thumbnail"/>
+                    <h3 style="color:maroon;">
+                        Technology
+                    </h3>
+                    <p style="text-align:justify;font-size:small;height:150px;">
+                        We are the leading provider for outsourcing technical support. From start-ups to non-profits, books to accounting software, we work with clients who understand their core competencies and want to outsource their tech support operations.
+                    </p>
+                    <span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "Technology")</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-info">
+                <div class="panel panel-heading text-center" style="font-weight:bold;">News &amp; Events</div>
+                <div class="panel panel-body">
+                    <marquee height="127" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2" direction="up" behavior="scroll">
+                        <span class="text_2"><strong>&#8250;</strong></span> MMC is mainly focused on the development of products related to ESS, SEMS, HRMS, FADS, Travel<br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> MMC is an Indian software resource center engaged in catering to the software requirements<br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> MMC Soft Systems can provide quality software development services or solutions , or manage the entire automation process<br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> MMC Software uses several mechanisms to ensure that each project is on track<br /><br />
+                    </marquee>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="panel panel-info">
+                <div class="panel panel-heading text-center" style="font-weight:bold;">Compliance News</div>
+                <div class="panel panel-body">
+                    <marquee height="127" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2" direction="up" behavior="scroll">
+                        <span class="text_2"><strong>&#8250;</strong></span> <a href="https://www.labourlawreporter.com/" target="_blank">Labour Laws</a><br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span><a href="https://paycheck.in/salary/minimumwages" target="_blank">Revised Wages</a><br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> <a href="https://www.esic.nic.in/" target="_blank">ESIC Related</a><br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> <a href="https://www.epfindia.gov.in/site_en/index.php" target="_blank">EPFO Related</a><br /><br />
+                    </marquee>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="panel panel-info">
+                <div class="panel panel-heading text-center" style="font-weight:bold;">Quick Links</div>
+                <div class="panel panel-body">
+                    <marquee height="127" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2" direction="up" behavior="scroll">
+                        <span class="text_2"><strong>&#8250;</strong></span> @Html.ActionLink("Payroll","Payroll")<br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> @Html.ActionLink("Compliance", "Compliances")<br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> @Html.ActionLink("HRMS", "HRMS")<br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span> @Html.ActionLink("Software Support", "Contact")<br /><br />
+                    </marquee>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3" style="margin:0px 0px 0px 0px;">
+            <div class="panel panel-info">
+                <div class="panel panel-heading text-center" style="font-weight:bold;">What our customers say</div>
+                <div class="panel panel-body">
+                    <marquee height="127" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2" direction="up" behavior="scroll">
+                        <span class="text_2"><strong>&#8250;</strong></span>"This company is the best. I am so happy with the result!"<br /><span style="font-style:normal;">Rohit Mishra, HR Executive, Meenucreation</span><br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span>"One word... WOW!!"<br /><span style="font-style:normal;">Mr. Punit, HR Executive, Paramount Products</span><br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span>"Could I... BE any more happy with this company?"<br /><span style="font-style:normal;">Kuldeep, HR Manager, Rajlaxmi Cottonmill</span><br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span>"Best software for HR & Compliance?"<br /><span style="font-style:normal;">Sunil Kumar, HR Manager, Bodycare</span><br /><br />
+                        <span class="text_2"><strong>&#8250;</strong></span>"Very comprehensive payroll services and supportive staff."<br /><span style="font-style:normal;">Madhuresh Sharma, HR Manager, Sibrama Newage</span><br /><br />
+                    </marquee>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<br />
+
+<div class="container" style="text-align:center;">
+    <h4 style="text-align:center;">Some of our clients</h4>
+    <div id="Div2" class="carousel slide text-center container" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox" style="height:100px">
+            <div class="item active">
+                <span style="font-style:normal;"><img src="~/Multimedia/Clientlogo/arnit_logo.png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/bllogo.jpg" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/images.jfif" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo (1).png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo (2).png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo (3).png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo (4).png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo (5).png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo (6).png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo.png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/logo_black.png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/looogo-e1503498401342.png" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/unnamed.jpg" style="height:75px;width:200px;" /></span>
+            </div>
+            <div class="item">
+                <span style="font-style:normal;height:200px;"><img src="~/Multimedia/Clientlogo/vamani_logo.png" style="height:75px;width:200px;" /></span>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div><br />
+
+    @* feedback form starts *@
+    @*<div class="container text-center">
+
+        @using (Html.BeginForm("feedbackrequest", "Home"))
+        {
+            <div class="panel panel-primary">
+                <div class="panel panel-heading"><span><img src="~/Multimedia/Image/feedback1.jpg" height="20"/></span></div>
+                <div class="panel-body">
+                   
+                    <div class="col-sm-12">
+                        
+                        <input type="text" id="first" name="txtname" maxlength="30" class="form-control" placeholder="Enter Your Full Name" required /><br />
+                        
+                        <input type="text" name="txtcmpname" maxlength="30" class="form-control" style="padding-top:10px;" placeholder="Enter Your Company Name" required/><br />
+                        <textarea name="txtfeedback" rows="2" cols="20" style="height:60px;width:100%; padding-top:10px;" maxlength="500" class="form-control" placeholder="Enter Your Feedback Message here" required></textarea><br />
+                        <div>
+                            <p style="float:left;">Enter the total of these two values</p>
+                        </div>
+                        <table>
+                            <tr><td style="width:35px;">
+                                    <input type="text" id="first" name="txtfirstvalue" maxlength="30" enable="false"  readonly="readonly" onload="this.value=randomNum"/><br />
+                                </td>
+                            <td>X</td>
+                                <td style="width:35px;">
+                                    <input type="text" name="txtsecondvalue" maxlength="30" enable="false" readonly="readonly" /><br />
+                                </td>
+                            <td>=</td>
+                                <td style="width:45px;">
+                                    <input type="text" name="txttotalvalue" maxlength="30"  required /><br />
+                                </td>
+                                <td style="width:30px;">
+                                    <input type="text" name="txtautototal" maxlength="30" class="form-control" readonly="readonly" type="hidden"/><br />
+                                </td>
+                            </tr>
+                        </table>
+                        <button id="btnsubmit" class="btn btn-success btn-sm" type="submit">Submit</button>
+
+                    </div>
+                   
+                </div>
+            </div>
+
+        }
+
+
+    </div>*@
+
+    @*feedback form ends  *@
+   
+   <div class="container">
+    <div class="column">
+        <div class="card">
+            <p><i class="glyphicon glyphicon-user"></i></p>
+            <h3>2+</h3>
+            <p>Partners</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <p><i class="glyphicon glyphicon-check"></i></p>
+            <h3>300+</h3>
+            <p>Projects</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <p><i class="glyphicon glyphicon-ok-sign"></i></p>
+            <h3>300+</h3>
+            <p>Happy Clients</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <p><i class="glyphicon glyphicon-user"></i></p>
+            <h3>100+</h3>
+            <p>Meetings</p>
+        </div>
+    </div>
+</div><br />
+<div class="container" style="background-color:azure;height:auto;">
+<h4 style="color:maroon;"><b><u>Technology that transform your ideas into reality.</u></b></h4>
+<div class="row" style="text-align:right;">
+<div class="col-sm-6">
+<div class="text-left">
+<p><ul><li>Technology derieved skills that perfectly handles the payroll related operations.</li></ul></p>
+<p><ul><li>It also enables an end user to make their reporting efficiently and time bound.</li></ul></p>
+<p><ul><li>New technology comes with the greate features that always enables IT department working seemlessly.</li></ul></p>
+<p><ul><li>It also encourage the teamwork that matters everywhere.</li></ul></p>
+<p><ul><li>Transform your creative ideas into reality using letest technology and skills.</li></ul></p>
+</div>
+</div>
+<div class="col-sm-6">
+<video width="350" controls>
+    
+  <source src="~/Multimedia/Payroll_Animation.mp4" type="video/mp4">
+ 
+  Your browser does not support HTML5 video.
+</video>
+</div>
+
+</div>
+</div>
+
+<div class="container">
+<h4 style="color:maroon;"><b><u>Looking for Letest IT Devices or software ?</u></b></h4><hr />
+<div class="row">
+<div class="col-sm-2 col-xs-4">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07QJ9YRG3&asins=B07QJ9YRG3&linkId=08af667ac083ad34a6f1c291e68443fc&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe> <br />
+</div>
+<div class="col-sm-2 col-xs-4">
+ <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07HGLB1TJ&asins=B07HGLB1TJ&linkId=b23ca9f25db90b8e9fb979f9744c6688&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe> <br />
+</div>
+
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07HFBMPH4&asins=B07HFBMPH4&linkId=abd1583b5c62b0e22f970c20d0eea99f&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe><br />
+
+</div>
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B0722J7NNX&asins=B0722J7NNX&linkId=9bbfecb39e7cedc635b5da5c5540385c&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe><br />
+
+</div>
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B01HGCLUH6&asins=B01HGCLUH6&linkId=1ca540517bfaea4126b55d21974276e3&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe><br />
+
+</div>
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07JVTC9HH&asins=B07JVTC9HH&linkId=ab3fc21002db54a9f7cfdb6a2da4f87d&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe><br />
+
+</div>
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B0111YEG44&asins=B0111YEG44&linkId=47566585032f56c24e1f344c99a66c60&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe><br />
+
+</div>
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B015XQYC72&asins=B015XQYC72&linkId=c880f807fe5f53b7529b764625a68644&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe><br />
+
+</div>
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B00O3SFL2M&asins=B00O3SFL2M&linkId=9b491e0f21da99f9d3ae3dab934b411d&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe><br />
+
+</div>
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B012AQIQ48&asins=B012AQIQ48&linkId=10b12df116035284ad566f1053ddfa6b&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+
+</div>
+
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B012MQS060&asins=B012MQS060&linkId=ce3a4c4a8486724629b4d03eefd4398b&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+
+</div>
+
+<div class="col-sm-2 col-xs-4">
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B00N3TWA44&asins=B00N3TWA44&linkId=5f219f9bfcf6dcd0aca169f5c43020c4&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+
+</div>
+
+</div>
+ </div>
+@* content starts *@
+@*<div class="container">
+<div class="row text-center" style="height:300px;">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:300px;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+        <li data-target="#myCarousel" data-slide-to="7"></li>
+        <li data-target="#myCarousel" data-slide-to="8"></li>
+        <li data-target="#myCarousel" data-slide-to="9"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" style="margin-top:0px;">
+        <div class="item active">
+            <iframe style="width:150px;height:300px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B00HU6KL5Q&asins=B00HU6KL5Q&linkId=b165cdae6ce20eab716bccb5166eddb9&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+        </div>
+
+        <div class="item">
+           <iframe style="width:150px;height:300px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B00O3SFL2M&asins=B00O3SFL2M&linkId=9b491e0f21da99f9d3ae3dab934b411d&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+        </div>
+
+        <div class="item">
+           <iframe style="width:150px;height:300px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B015XQYC72&asins=B015XQYC72&linkId=c880f807fe5f53b7529b764625a68644&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+        </div>
+
+        <div class="item">
+           <iframe style="width:150px;height:300px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B0111YEG44&asins=B0111YEG44&linkId=47566585032f56c24e1f344c99a66c60&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+        </div>
+       <div class="item">
+<iframe style="width:150px;height:300px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07JVTC9HH&asins=B07JVTC9HH&linkId=ab3fc21002db54a9f7cfdb6a2da4f87d&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+       </div>
+     <div class="item">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B01HGCLUH6&asins=B01HGCLUH6&linkId=1ca540517bfaea4126b55d21974276e3&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+       </div>
+      <div class="item">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B0722J7NNX&asins=B0722J7NNX&linkId=9bbfecb39e7cedc635b5da5c5540385c&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+       </div>
+        <div class="item">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07HFBMPH4&asins=B07HFBMPH4&linkId=abd1583b5c62b0e22f970c20d0eea99f&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+       </div>
+      <div class="item">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07HGLB1TJ&asins=B07HGLB1TJ&linkId=b23ca9f25db90b8e9fb979f9744c6688&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe> 
+       </div>
+          <div class="item">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=deepakmishr0c-21&marketplace=amazon&region=IN&placement=B07QJ9YRG3&asins=B07QJ9YRG3&linkId=08af667ac083ad34a6f1c291e68443fc&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+       </div>
+      
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+</div>*@
+
+@* content ends *@
+

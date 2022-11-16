@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 250px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+</style>
+<div class="container ">
+    <h1>Our Products & Services</h1>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Payroll Management</div>
+                <div class="panel panel-body">
+
+                    <div class="card">
+                        <img src="~/Multimedia/Image/payroll1.png" alt="payroll" style="width:100%;height:150px;">
+                        <h3>Payroll Management</h3>
+                        <p class="price">At affordable price</p>
+                        <p>We deals in payroll management systems.</p>
+                        <p><button><span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "Payroll")</span></button></p>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Biometric Systems</div>
+                <div class="panel panel-body">
+
+                    <div class="card">
+                        <img src="~/Multimedia/Image/biometric.jpg" alt="payroll" style="width:100%;height:150px;">
+                        <h3>Biometric System</h3>
+                        <p class="price">At very low price</p>
+                        <p>We deals in biometric attendance systems.</p>
+                        <p><button><span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "Attendance")</span></button></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">HRMS</div>
+                <div class="panel panel-body">
+
+                    <div class="card">
+                        <img src="~/Multimedia/Image/HR.jpg" alt="payroll" style="width:100%;height:150px;">
+                        <h3>HRMS Management System</h3>
+                        <p class="price">At your ease</p>
+                        <p>Your every needs related to HRMS resources are here.</p>
+                        <p><button><span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "HRMS")</span></button></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Website Development</div>
+                <div class="panel panel-body">
+
+                    <div class="card">
+                        <img src="~/Multimedia/Image/webicon.png" alt="payroll" style="width:100%;height:150px;">
+                        <h3>Web Management System</h3>
+                        <p class="price">At your ease</p>
+                        <p>Get the letest technology to boost your web application.</p>
+                        <p><button><span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "WebApplication")</span></button></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">ERP Developments</div>
+                <div class="panel panel-body">
+
+                    <div class="card">
+                        <img src="~/Multimedia/Image/erp.png" alt="payroll" style="width:100%;height:150px;">
+                        <h3>ERP Management System</h3>
+                        <p class="price">At your ease</p>
+                        <p>Design your erp in your budget having all the features that suits your need..</p>
+                        <p><button><span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "DesktopApplication")</span></button></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-info">
+                <div class="panel panel-heading">Billing Softwares</div>
+                <div class="panel panel-body">
+
+                    <div class="card">
+                        <img src="~/Multimedia/Image/billing.png" alt="payroll" style="width:100%;height:150px;">
+                        <h3>Billing Management System</h3>
+                        <p class="price">At your ease</p>
+                        <p>Give your clients an enhanced billing experience with the letest technology..</p>
+                        <p><button><span class="btn btn-default btn-sm">@Html.ActionLink("Read More..", "Billing")</span></button></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

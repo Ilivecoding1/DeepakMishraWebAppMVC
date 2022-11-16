@@ -1,0 +1,26 @@
+﻿/*Poor;Weak;Average;Nice;Strong;*/
+.Poor{
+    background-color:red;
+    color:black;
+}
+.Weak{
+    background-color:aqua;
+    color:maroon;
+}
+.Average{
+    background-color:yellow;
+    color:maroon;
+}
+.Nice{
+    background-color:dodgerblue;
+    color:white;
+}
+.Strong{
+    background-color:green;
+    color:white;
+}
+.BarBorder{
+    border:1px solid;
+    border-color:black;
+    width:150px;
+}

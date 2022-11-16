@@ -1,0 +1,184 @@
+﻿
+@{
+    ViewBag.Title = "Download";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: deepskyblue;
+  color: maroon;
+  transform: rotateY(180deg);
+}
+</style>
+<div class="container">
+
+    <div class="panel panel-info">
+        <div class="panel panel-heading"><span><img alt="" src="icons/Resources.ico" /></span>Download Links for some Useful Resources</div>
+        <div class="panel panel-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel panel-heading">Download Payroll Manual and some other resources.</div>
+
+                        <div class="panel panel-body">
+                           
+                            <div class="row">
+
+                                <div class="flip-box">
+                                    <div class="flip-box-inner">
+                                        <div class="flip-box-front">
+                                            <h2>Payroll Resources</h2>
+                                            <span><img alt="#" src="~/Multimedia/Image/payroll_services.jpg" height="100" width="200"/></span>
+                                        </div>
+                                        <div class="flip-box-back">
+                                            <h2>Click to download</h2>
+                                            <i class="glyphicon glyphicon-download btn btn-default btn-sm" style="color:maroon;">@Html.ActionLink("Click here to download payroll resources", "ManualDownloads")</i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel panel-heading">SQL Server Free Edition</div>
+                        <div class="panel panel-body">
+                                                        
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                   
+                                    <div class="flip-box-front">
+                                        <h2>Free SQL Download</h2>
+                                        <span><img alt="Sql server" src="~/Multimedia/Icons/ssms.ico" height="100" width="100" /></span>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <h2>Click to Download</h2>
+                                        <a class="glyphicon glyphicon-download btn btn-default btn-sm" href="https://www.microsoft.com/en-in/download/details.aspx?id=30438" target="_blank">Click here to download sql server</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel panel-heading">Download .Net Framwork</div>
+                        <div class="panel panel-body">
+                           
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+
+                                    <div class="flip-box-front">
+                                        <h2>.Net Framwork Download</h2>
+                                        <span><img alt="#" src="~/Multimedia/Icons/root.ico" height="100" width="100" /></span>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <h2>Click to Download</h2>
+                                        <a class="glyphicon glyphicon-download btn btn-default btn-sm" href="https://www.microsoft.com/en-in/download/details.aspx?id=40779" target="_blank" >Click here to download .net framwork</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><hr />
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel panel-heading">Download Cristal Reports Runtime</div>
+                        <div class="panel panel-body">
+                            
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+
+                                    <div class="flip-box-front">
+                                        <h2>Crystal Runtime Download</h2>
+                                        <span><img alt="#" src="~/Multimedia/Icons/crystal.png" height="100" width="100" /></span>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <h2>Click to Download</h2>
+                                        <a class="glyphicon glyphicon-download btn btn-default btn-sm" href="https://wiki.scn.sap.com/wiki/display/BOBJ/Crystal+Reports%2C+Developer+for+Visual+Studio+Downloads" target="_blank">Click here to download crystal runtime</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel panel-heading">HRMS Resources</div>
+
+                        <div class="panel panel-body">
+                            
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+
+                                    <div class="flip-box-front">
+                                        <h2>HR Resources</h2>
+                                        <span><img alt="#" src="~/Multimedia/Image/HR.jpg" height="100" width="100" /></span>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <h2>Click to Download</h2>
+                                        <a class="glyphicon glyphicon-download btn btn-default btn-sm" href="https://www.citehr.com/" target="_blank">Click here to access HR Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br /><hr />
+
+
+            </div>
+           
+
+        </div>
+    </div>
+</div>

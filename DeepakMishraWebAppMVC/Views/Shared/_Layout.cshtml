@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>@ViewBag.Title M.M.C. Soft Systems</title>
+    <link rel="shortcut icon" href="~/Multimedia/Icons/mmclogo.jpg" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/chosen.min.css" rel="stylesheet" />
+   
+</head>
+<body>
+    @* header starts *@
+    <div class="header">
+        <div class="container">
+            <div class="row" id="top-row">
+                <div class="col-md-6">
+                    <div class="text-left">
+                        <span><img src="~/Multimedia/Icons/whatsapp.png" alt="call now for demo" class="rounded-circle" width="20" height="20" />For Demo call now on <a href="tel:9899853455">9899853455</a></span>
+                    </div>
+                </div>
+                <div class="text-right col-md-6">
+                    <span><a href="https://www.facebook.com/MMC-Soft-Systems-1818907618198764/?modal=admin_todo_tour" target="_blank"><img src="~/Multimedia/Icons/FB.png" class="rounded-circle" height="20" width="20"/></a></span>
+                    <span><a href="https://twitter.com/SoftMmc" target="_blank"><img src="~/Multimedia/Icons/Twitter.png" class="rounded-circle" height="20" width="20"/></a></span>
+                    <span><a href="#"><img src="~/Multimedia/Icons/insta.png" class="rounded-circle" height="20" width="20" /></a></span>
+                    <span><a href="https://www.linkedin.com/company/mmc-soft-systems/" target="_blank"><img src="~/Multimedia/Icons/LinkedIn.jpg" class="rounded-circle" height="20" width="20"/></a></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    @* header ends *@
+    <marquee height="20" onmouseout="this.start()" onmouseover="this.stop()" style="font-size:small;" direction="right">@Html.ActionLink("Register now to get the free demo as well as check the letest release and offers.", "Enquiry")<img alt="offer" src="~/Multimedia/Icons/newGIF.gif" height="25" width="35" /></marquee>
+    @* menubar starts *@
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              @*<span><img src="~/Multimedia/Icons/mmclogo.jpg" height="45" width="45" /></span><strong style="color:white;font-size:large; padding-right:85px;">M.M.C Soft Systems</strong>*@
+                 @Html.ActionLink("M.M.C. Soft Systems", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+              
+            </div>
+
+            <div class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Our Clients", "Clients", "Home")</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    <li>@Html.ActionLink("Enquiry", "Enquiry")</li>
+                    <li>@Html.ActionLink("Downloads", "Download", "Home")</li>
+                    <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
+                    <li class="dropdown">
+                        
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Payroll", "Payroll", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("HRMS", "HRMS", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Attendance Machines", "Attendance", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Compliances", "Compliances", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("ESS", "ESS", "Home")</li>
+                            <li class="divider"></li>
+                       </ul>
+                    
+                    </li>
+                    <li>@Html.ActionLink("Login/Register", "Loginpage", "Login")</li>
+                </ul>
+               
+            </div>
+        </div>
+    </div>
+    @* menubar ends *@
+
+    @* bodycontent starts *@
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+    @* bodycontent ends *@
+
+    @* scroller starts *@
+    @*<div class="container text-center well">
+        @Html.ActionLink("Back to Top", "Index", "Home")
+    </div>*@
+    @* scroller ends *@
+
+     @*footer starts*@ 
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <br />
+
+                <div class="container-fluid col-md-3">
+                    <h4 class="text-left"><u><strong style="color:#03c6fc">Our</strong> </u><u>Company</u></h4>
+                    <div class="text-left">@Html.ActionLink("Home", "Index")</div>
+                    <div class="text-left">@Html.ActionLink("About Us", "About")</div>
+                    <div class="text-left">@Html.ActionLink("Contact Us", "Contact")</div>
+                    <div class="text-left">@Html.ActionLink("Careers", "Careers")</div>
+
+                </div>
+
+                <div class="container-fluid col-md-3">
+                    <h4 class="text-left"><u><strong style="color:#03c6fc">Product &amp;</strong> </u><u>Services</u></h4>
+                    <div class="text-left">@Html.ActionLink("Product Catalog", "Catalog")</div>
+                    <div class="text-left">@Html.ActionLink("Product & Services", "Services")</div>
+                    <div class="text-left">@Html.ActionLink("Privacy Policy", "Policy")</div>
+                    <div class="text-left">@Html.ActionLink("Downloads", "Download")</div>
+
+                </div>
+
+                <div class="container-fluid col-md-3">
+                    <h4 class="text-left"><u><strong style="color:#03c6fc">Support &amp;</strong> </u><u>Contacts</u></h4>
+                    <div class="text-left">@Html.ActionLink("Enquiry", "Enquiry")</div>
+                    <div class="text-left">@Html.ActionLink("Our Clients", "Clients")</div>
+                    <div class="text-left">@Html.ActionLink("Contact Us", "Contact")</div>@*Text Function (because these are on same controller)*@
+                    <div class="text-left">@Html.ActionLink("Login", "Loginpage", "Login")</div>@*Text Function Controllername*@
+                </div>
+
+                <div class="text-left container-fluid col-md-3">
+                    <h4 class="text-left"><u><strong style="color:#03c6fc">Our</strong></u><u> Presence</u></h4>
+                    <span class="glyphicon glyphicon-map-marker"></span> <strong style="color:#03c6fc">Registered Office:</strong>
+                    <p>B-372/11,Gyan Mandir Road, Jaitpur Badarpur - 110044</p>
+                    <p><span class="glyphicon glyphicon-phone">9899853455</span></p>
+                    
+                    <span class="glyphicon glyphicon-map-marker"></span> <strong style="color:#03c6fc">Branch Office:</strong>
+                    <p>D-7,IInd Floor,Opposite Saibaba Temple, Laxmi nagar- 110092</p>
+                    <p><span class="glyphicon glyphicon-phone">-9818390532</span></p>
+                    
+                </div>
+
+            </div>
+        </div><br />
+        <div class="back-top" style="position:fixed;right:5px;bottom:70px;opacity:0.8;"><a href="#top-row"><img src="~/Multimedia/Icons/up arrow.png" height="40" width="40" /></a></div>      
+        <p>Copyright &copy; @DateTime.Now.Year M.M.C. Soft Systems.All rights reserved. | Developed and Maintained by M.M.C. Soft Systems.| <a href="~/QueryForm.aspx" target="_blank">...</a> </p>
+
+    </footer>
+     @*footer ends*@ 
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/chosen.jquery.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

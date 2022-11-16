@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "PayrollManualDownloads";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<string>
+    <div class="container">
+
+        <h2>Download Some Usefull Payroll Resources</h2><hr />
+        <table style="width:100%;border:1px solid;background-color: #f2f2f2;height:50px;text-align:center;">
+            <tr style="background-color: #f2f2f2;height:50px;text-align:center;">
+                <th style="border:1px solid;color:maroon;text-align:center;">File Name & Descriptions</th>
+                <th style="border:1px solid;color:maroon;text-align:center;">Download Link</th>
+            </tr>
+                        @for (var i = 0; i <= Model.Count - 1; i++)
+            {
+                  <tr style="background-color: #f2f2f2">
+                    <td style="border:1px solid">@Model[i].ToString() </td>
+                    <td style="border:1px solid;" class="btn btn-success btn-md"><i class="glyphicon glyphicon-download"></i>@Html.ActionLink("File Download", "FileDownload", new { ImageName = @Model[i].ToString() }, new {@style="color:maroon;"}) </td>
+                </tr>
+            }
+        </table>
+    </div>

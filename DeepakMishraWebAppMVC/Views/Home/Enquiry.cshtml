@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "Enquiry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("newenquiry", "Home", FormMethod.Post, new { @id = "form1", @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="panel panel-success">
+            <div class="panel panel-heading" style="color:maroon;">Registration Form for new product enquiry.</div>
+            <div class="panel panel-body">
+            <div class="row">
+                @* image  *@
+                <div class="col-md-4">
+                    <div class="panel panel-success">
+                        <div class="panel panel-heading"></div>
+                        <div class="panel panel-body">
+                            <img src="~/Multimedia/Icons/ch-contact.png" class="img-responsive" />
+                        </div>
+                    </div>
+                </div>
+                @* image *@
+
+                @* other *@
+                <div class="col-md-8">
+                    <div class="panel panel-success">
+                        <div class="panel-heading"></div>
+                        <div class="panel panel-body">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <label>Enquiry Type*</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            @Html.DropDownList("EnquiryType", new List<SelectListItem>
+{
+   new SelectListItem{ Text="-Please Select-", Value = "-Please Select-" },
+    new SelectListItem{ Text="Demo Request", Value = "Demo Request" },
+   new SelectListItem{ Text="New Product Related", Value = "New Product Related" },
+   new SelectListItem{ Text="Services Related", Value = "Services Related" },
+   new SelectListItem{ Text="AMC Related", Value = "AMC Related" },
+   new SelectListItem{ Text="Biometrics Related", Value = "Biometrics Related" },
+   new SelectListItem{ Text="Software Support", Value = "Software Support" },
+   new SelectListItem{ Text="Others", Value = "Others" }
+},new {@class="form-control"})
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <label>Bussines Type*</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            @Html.DropDownList("BussinesType", new List<SelectListItem>
+{
+   new SelectListItem{ Text="-Please Select-", Value = "-Please Select-" },
+    new SelectListItem{ Text="Import / Export Firm", Value = "Import / Export Firm" },
+   new SelectListItem{ Text="Textiles Industry", Value = "Textiles Industry" },
+   new SelectListItem{ Text="Automobile Industry", Value = "Automobile Industry" },
+   new SelectListItem{ Text="Hotel & Resorts Industry", Value = "Hotel & Resorts Industry" },
+   new SelectListItem{ Text="IT Industry", Value = "IT Industry" },
+   new SelectListItem{ Text="Medical Industry", Value = "Medical Industry" },
+   new SelectListItem{ Text="Engineering Industry", Value = "Engineering Industry" },
+   new SelectListItem{ Text="Govt./PSU Sector", Value = "Govt./PSU Sector" },
+   new SelectListItem{ Text="Consultancy Services", Value = "Consultancy Services" },
+   new SelectListItem{ Text="Others", Value = "Others" }, 
+}, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label>Name:</label>
+                                    <input type="text" name="txtName" class="form-control" placeholder="Enter your name" required />
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Company Name:</label>
+                                    <input type="text" name="txtcmpName" class="form-control" placeholder="Enter your company name" required/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Company Size:</label>
+                                    <input type="text" name="txtcmpsize" class="form-control" placeholder="Enter company manpower" required/>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Email Id:</label>
+                                    <input type="text" name="txtemail" class="form-control" placeholder="Enter your email id" required/>
+                                </div>
+                                
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label>Contact Person:</label>
+                                    <input type="text" name="txtcpname" class="form-control" placeholder="Enter contact person name" required/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Phone:</label>
+                                    <input type="text" name="txtcpphone" class="form-control" placeholder="Phone no of contact person" required/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Designation:</label>
+                                    <input type="text" name="txtcppdesig" class="form-control" placeholder="Designation of contact person" required/>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Upload(If any):</label>
+                                    <input type="file" name="fileUploader" required />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Your Message:</label>
+                                    <textarea name="txtmessage" rows="2" cols="20" style="height:100px;width:100%;" maxlength="500" class="form-control" placeholder="Tell us in brief about your company and requirement." required></textarea><br />
+                                </div>
+                            </div>
+
+                            <div class="text-center"><button type="submit" class="btn btn-success btn-sm">Submit</button></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                @* other *@
+            </div>
+ 
+            </div>
+            
+                </div>                       
+            </div>       
+  
+}

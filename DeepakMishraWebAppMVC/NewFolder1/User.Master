@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="CloudPro_Solution.User" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>User Home</title>
+    <link href="Customized/css/OtherUserMaster.css" rel="stylesheet" />
+    <link href="Customized/css/Menu.css" rel="stylesheet" />
+      <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="row">
+        <div class="container-fluid">
+                <table style="height: 60px; width: 100%;">
+                    <tr>
+                        <td style="text-align: left;">
+                            <img alt="CloudPro Logo" src="Multimedia/Images/Green-Cloud.jpg" height="60" width="60" /><strong style="color: maroon;">CloudPro Webmaster</strong></td>
+                        <td>
+                            <img alt="Company Logo" src="Multimedia/Images/Green-Cloud.jpg" height="60" width="60" />
+                            <asp:Label ID="lblcmpName" runat="server" Text="" Font-Bold="true" Font-Italic="true" Font-Size="Medium" ForeColor="Maroon"></asp:Label>
+                        </td>
+                        <td>
+                            <img alt="Company Logo" src="Multimedia/Images/Green-Cloud.jpg" height="60" width="60" />
+                            <asp:Label ID="lblUsername" runat="server" Text="" Font-Bold="true" Font-Italic="true" Font-Size="Medium" ForeColor="Maroon"></asp:Label>
+                        </td>
+                        <td style="text-align: right;">
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Multimedia/Images/logout-93.png" Height="60" Width="60" OnClick="ImageButton1_Click" /></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <asp:TextBox ID="txtUtype" runat="server" Enabled="false" Visible="false"></asp:TextBox>
+                            <asp:TextBox ID="txtDept" runat="server" Enabled="false" Visible="false"></asp:TextBox>
+                            <asp:ImageButton ID="backtoHome" runat="server" OnClick="backtoHome_Click" ImageUrl="~/Multimedia/Images/back.jfif" Height="40" Width="80" /></td>
+                    </tr>
+                </table>
+
+                <%--<table style="height: 25px; width: 100%;">
+                <tr>
+                    <td style="width: 100%;">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-fw fa-user"></i>Master</a></li>
+                            <li><a href="#"><i class="fa fa-fw fa-rupee-sign"></i>Transaction</a></li>
+                            <li><a href="#"><i class="fa fa-fw fa-notes-medical"></i>Reports</a></li>
+                            <li><a href="#"><i class="fa fa-fw fa-tools"></i>Tools</a></li>
+                            <li><a href="#"><i class="fa fa-fw fa-assistive-listening-systems"></i>Support</a></li>
+                        </ul>
+
+                    </td>
+                </tr>
+            </table>--%>
+                <div class="container-fluid">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Master
+      <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="Company.aspx">Company Setup</a>
+                            <a href="PaymentConfiguration.aspx">Salary Setup</a>
+                            <a href="DepartmentAdd.aspx">Department</a>
+                            <a href="SubDepartmentAdd.aspx">Sub Department</a>
+                            <a href="DesignationAdd.aspx">Designation</a>
+                            <a href="BankMaster.aspx">Bank Master</a>
+                            <a href="ShiftAdd.aspx">Shift Master</a>
+                            <a href="CategoryAdd.aspx">Category Master</a>
+                            <a href="QualificationAdd.aspx">Qualification</a>
+                            <a href="EmployeeAdd.aspx">Employee Master</a>
+                            <a href="MasterExport.aspx">Master Export</a>
+                        </div>
+                    </div>
+
+                     <div class="dropdown">
+                        <button class="dropbtn">
+                            Transaction
+      <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Movement Time</a>
+                             <a href="OthersLeaveApply.aspx">Leave Apply</a>
+                            <a href="LeaveApprove.aspx">Leave Approve</a>
+
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Reports
+      <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="OthersPayslip.aspx">Payslip Download</a>
+                            <a href="LeaveStatus.aspx">Leave Report</a>
+
+                        </div>
+                    </div>
+
+                      <div class="dropdown">
+                        <button class="dropbtn">
+                            Utility
+      <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">User Management</a>
+                            <a href="RaiseTicketUser.aspx">Raise Ticket</a>
+
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Dashboard
+      <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Graphic Analisys</a>
+                            <a href="#">Graphic Analisys2</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="fontawesome-free-5.15.3-web/js/all.min.js"></script>
+</body>
+</html>

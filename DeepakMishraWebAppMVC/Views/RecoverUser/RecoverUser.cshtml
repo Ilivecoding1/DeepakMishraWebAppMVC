@@ -1,0 +1,50 @@
+﻿@model DeepakMishraWebAppMVC.Models.RecoverUsername
+
+
+@{
+    ViewBag.Title = "RecoverUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="form-horizontal">
+            <h5>Recover Username</h5>
+            <h6>Enter your License no to recover your username</h6>
+            <p>Your License no will as XXXXXX-XX. For more information refer to your registration email or contact with Team MMC.</p>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.licenseno, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.licenseno, new { htmlAttributes = new { placeholder = "XXXXXX-XX ", @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.licenseno, "", new { @class = "text-danger" })
+                    <p>Your License no will as XXXXXX-XX.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-4">
+                    <input type="submit" value="Recover Username" class="btn btn-primary" />
+                </div>
+            </div>
+          <div class="form-group">
+              <strong>Your Username is:</strong>
+              @Html.ViewData["getusername"]
+              <hr />
+              @*<strong>Not Found:</strong>
+        @Html.ViewData["errorinusername"]
+        <hr />*@
+          </div>
+            @Html.ActionLink("Go to Login page", "Loginpage", "Login")
+        </div>
+    </div>
+    
+}
+
+<div>
+    @*@Html.ActionLink("Back to List", "Index")*@
+</div>
